@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Grid } from './styles';
 
 const Layout: React.FC = () => {
-  return <Container></Container>;
+  return <Grid></Grid>;
 };
 
 export default Layout;
