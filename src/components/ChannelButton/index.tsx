@@ -1,9 +1,38 @@
 import React from 'react';
 
-import { Container } from './styles';
+import {
+  Container,
+  AudiotagIcon,
+  HashtagIcon,
+  Icons,
+  InviteIcon,
+  SettingsIcon,
+} from './styles';
 
-const ChannelButton: React.FC = () => {
-  return <Container></Container>;
+interface Props {
+  channelName: string;
+  selected?: boolean;
+  audioChannel?: boolean;
+}
+
+const ChannelButton: React.FC<Props> = ({
+  channelName,
+  selected,
+  audioChannel,
+}) => {
+  return (
+    <Container className={selected ? 'active' : ''}>
+      <div>
+        {audioChannel ? <AudiotagIcon /> : <HashtagIcon />}
+
+        <span>{channelName}</span>
+      </div>
+      <Icons>
+        <InviteIcon />
+        <SettingsIcon />
+      </Icons>
+    </Container>
+  );
 };
 
 export default ChannelButton;
