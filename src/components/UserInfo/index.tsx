@@ -1,9 +1,34 @@
 import React from 'react';
 
-import { Container } from './styles';
+import {
+  Container,
+  Profile,
+  Avatar,
+  UserData,
+  Icons,
+  MicIcon,
+  HeadphoneIcon,
+  SettingsIcon,
+} from './styles';
 
 const UserInfo: React.FC = () => {
-  return <Container></Container>;
+  return (
+    <Container>
+      <Profile>
+        <Avatar />
+        <UserData>
+          <strong>Cassio Carvalho</strong>
+          <span>#2986</span>
+        </UserData>
+      </Profile>
+
+      <Icons>
+        <MicIcon />
+        <HeadphoneIcon />
+        <SettingsIcon />
+      </Icons>
+    </Container>
+  );
 };
 
 export default UserInfo;
