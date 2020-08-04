@@ -57,15 +57,15 @@ const userList = {
       image: 'https://api.adorable.io/avatars/100/warren',
     },
     {
-      nickname: 'Beepak Lhopra',
-      image: 'https://api.adorable.io/avatars/100/deepa',
+      nickname: 'Tio das vendas',
     },
     {
       nickname: 'Pene Mimmons',
       image: 'https://api.adorable.io/avatars/100/penemimm',
     },
     {
-      nickname: 'Tio das vendas',
+      nickname: 'Beepak Lhopra',
+      image: 'https://api.adorable.io/avatars/100/deepa',
     },
   ],
 };
