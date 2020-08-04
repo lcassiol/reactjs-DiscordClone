@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   Container,
@@ -9,7 +9,20 @@ import {
 } from './styles';
 import ChannelButton from '../ChannelButton';
 
-const ChannelList: React.FC = () => {
+interface ChannelProps {
+  name: string;
+}
+
+interface Props {
+  channels: {
+    text: ChannelProps[];
+    audio: ChannelProps[];
+  };
+}
+
+const ChannelList: React.FC<Props> = ({ channels }) => {
+  const [selectedChannel, setSelectedChannel] = useState('chat-livre');
+
   return (
     <Container>
       <ChannelContent>
@@ -21,11 +34,12 @@ const ChannelList: React.FC = () => {
           <AddCategoryIcon />
         </Category>
 
-        <ChannelButton selected channelName="chat-livre" />
-        <ChannelButton channelName="trabalho" />
-        <ChannelButton channelName="dotinha" />
-        <ChannelButton channelName="csgo" />
-        <ChannelButton channelName="valorant" />
+        {channels.text.map((channel) => (
+          <ChannelButton
+            selected={selectedChannel === channel.name}
+            channelName={channel.name}
+          />
+        ))}
       </ChannelContent>
 
       <ChannelContent>
@@ -37,11 +51,9 @@ const ChannelList: React.FC = () => {
           <AddCategoryIcon />
         </Category>
 
-        <ChannelButton audioChannel channelName="chat-livre" />
-        <ChannelButton audioChannel channelName="trabalho" />
-        <ChannelButton audioChannel channelName="dotinha" />
-        <ChannelButton audioChannel channelName="csgo" />
-        <ChannelButton audioChannel channelName="valorant" />
+        {channels.audio.map((channel) => (
+          <ChannelButton audioChannel channelName={channel.name} />
+        ))}
       </ChannelContent>
     </Container>
   );

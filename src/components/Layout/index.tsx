@@ -10,13 +10,30 @@ import UserInfo from '../UserInfo';
 import UserList from '../UserList';
 import ChannelData from '../ChannelData';
 
+const channels = {
+  text: [
+    { name: 'chat-livre' },
+    { name: 'trabalho' },
+    { name: 'dotinha' },
+    { name: 'csgo' },
+    { name: 'valorant' },
+  ],
+  audio: [
+    { name: 'chat-livre' },
+    { name: 'trabalho' },
+    { name: 'dotinha' },
+    { name: 'csgo' },
+    { name: 'valorant' },
+  ],
+};
+
 const Layout: React.FC = () => {
   return (
     <Grid>
       <ServerList />
       <ServerName />
       <ChannelInfo />
-      <ChannelList />
+      <ChannelList channels={channels} />
       <UserInfo />
       <ChannelData />
       <UserList />
