@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Logo from '../../assets/Logo.svg';
 import { Button } from './styles';
 
 export interface Props {
@@ -8,6 +7,7 @@ export interface Props {
   isHome?: boolean;
   hasNotifications?: boolean;
   mentions?: number;
+  imageUrl?: string;
 }
 
 const ServerButton: React.FC<Props> = ({
@@ -15,6 +15,7 @@ const ServerButton: React.FC<Props> = ({
   isHome,
   hasNotifications,
   mentions,
+  imageUrl,
 }) => {
   return (
     <Button
@@ -23,7 +24,9 @@ const ServerButton: React.FC<Props> = ({
       mentions={mentions}
       className={selected ? 'active' : ''}
     >
-      {isHome && <img src={Logo} alt="Rocketseat" />}
+      {imageUrl && (
+        <img src={imageUrl} alt={isHome ? 'Rocketseat' : 'serverImage'} />
+      )}
     </Button>
   );
 };
