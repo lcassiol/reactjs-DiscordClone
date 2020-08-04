@@ -22,9 +22,11 @@ export const Button = styled.button<Props>`
   cursor: pointer;
 
   > img {
-    width: ${(props) => (props.isHome ? '24px' : '47px')};
-    height: ${(props) => (props.isHome ? '24px' : '47px')};
+    width: ${(props) => (props.isHome ? '24px' : '48px')};
+    height: ${(props) => (props.isHome ? '24px' : '48px')};
     border-radius: 50%;
+
+    transition: border-radius 0.2s;
   }
 
   ::before {
@@ -71,6 +73,10 @@ export const Button = styled.button<Props>`
   &:hover {
     border-radius: 16px;
     background-color: ${(props) =>
-      props.isHome ? 'var(--rocketseat)' : 'var(--gray)'};
+      props.isHome ? 'var(--rocketseat)' : 'var(--discord)'};
+
+    > img {
+      border-radius: 16px;
+    }
   }
 `;
