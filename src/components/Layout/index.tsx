@@ -66,7 +66,6 @@ const userList = {
     },
     {
       nickname: 'Tio das vendas',
-      image: 'https://api.adorable.io/avatars/100/tiovenda',
     },
   ],
 };
