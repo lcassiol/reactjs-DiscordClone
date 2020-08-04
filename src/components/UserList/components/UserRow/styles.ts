@@ -53,6 +53,12 @@ export const Avatar = styled.div`
   border-radius: 50%;
   background-color: var(--primary);
 
+  > img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
   &.bot {
     background-color: var(--mention-detail);
   }

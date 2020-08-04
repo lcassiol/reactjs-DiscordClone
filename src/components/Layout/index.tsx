@@ -27,6 +27,50 @@ const channels = {
   ],
 };
 
+const userList = {
+  online: [
+    {
+      nickname: 'Cassio Carvalho',
+      image: 'https://api.adorable.io/avatars/100/cassio',
+    },
+    {
+      nickname: 'Diego Fernandes',
+      image: 'https://api.adorable.io/avatars/100/diego',
+    },
+    {
+      nickname: 'Pill Bates',
+      image: 'https://api.adorable.io/avatars/100/bill',
+    },
+    {
+      nickname: 'Meff Dezzos',
+      image: 'https://api.adorable.io/avatars/100/cassio',
+    },
+  ],
+  offline: [
+    {
+      nickname: 'Guilherme Rodz',
+      isBot: true,
+      image: 'https://api.adorable.io/avatars/100/guilherme',
+    },
+    {
+      nickname: 'Marren Duffet',
+      image: 'https://api.adorable.io/avatars/100/warren',
+    },
+    {
+      nickname: 'Beepak Lhopra',
+      image: 'https://api.adorable.io/avatars/100/deepa',
+    },
+    {
+      nickname: 'Pene Mimmons',
+      image: 'https://api.adorable.io/avatars/100/penemimm',
+    },
+    {
+      nickname: 'Tio das vendas',
+      image: 'https://api.adorable.io/avatars/100/tiovenda',
+    },
+  ],
+};
+
 const Layout: React.FC = () => {
   return (
     <Grid>
@@ -36,7 +80,7 @@ const Layout: React.FC = () => {
       <ChannelList channels={channels} />
       <UserInfo />
       <ChannelData />
-      <UserList />
+      <UserList users={userList} />
     </Grid>
   );
 };

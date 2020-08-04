@@ -5,12 +5,15 @@ import { Container, Avatar } from './styles';
 interface Props {
   isBot?: boolean;
   nickname: string;
+  image?: string;
 }
 
-const UserList: React.FC<Props> = ({ isBot, nickname }) => {
+const UserList: React.FC<Props> = ({ isBot, nickname, image }) => {
   return (
     <Container>
-      <Avatar className={isBot ? 'bot' : ''} />
+      <Avatar className={isBot ? 'bot' : ''}>
+        {image && <img src={image} alt="" />}
+      </Avatar>
 
       <strong>{nickname}</strong>
 
