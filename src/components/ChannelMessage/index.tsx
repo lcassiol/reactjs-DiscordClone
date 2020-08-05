@@ -10,6 +10,7 @@ export interface Props {
   content: string | React.ReactElement | React.ReactNode;
   hasMention?: boolean;
   isBot?: boolean;
+  image?: string;
 }
 
 const ChannelMessage: React.FC<Props> = ({
@@ -18,10 +19,13 @@ const ChannelMessage: React.FC<Props> = ({
   content,
   hasMention,
   isBot,
+  image,
 }) => {
   return (
     <Container className={hasMention ? 'mention' : ''}>
-      <Avatar className={isBot ? 'bot' : ''} />
+      <Avatar className={isBot ? 'bot' : ''}>
+        {image && <img src={image} alt={author} />}
+      </Avatar>
 
       <Message>
         <Header>

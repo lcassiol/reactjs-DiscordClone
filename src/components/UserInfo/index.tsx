@@ -12,10 +12,14 @@ import {
 } from './styles';
 
 const UserInfo: React.FC = () => {
+  const image = 'https://api.adorable.io/avatars/100/cassio';
+
   return (
     <Container>
       <Profile>
-        <Avatar />
+        <Avatar>
+          <img src={image} alt="cassio" />
+        </Avatar>
         <UserData>
           <strong>Cassio Carvalho</strong>
           <span>#2986</span>

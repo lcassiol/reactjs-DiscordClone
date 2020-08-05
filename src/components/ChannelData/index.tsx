@@ -6,6 +6,9 @@ import ChannelMessage, { Mention } from '../ChannelMessage';
 import { Container, Messages, InputWrapper, Input, InputIcon } from './styles';
 
 const ChannelData: React.FC = () => {
+  const image = 'https://api.adorable.io/avatars/100/guilherme';
+  const image2 = 'https://api.adorable.io/avatars/100/diebot';
+  const image3 = 'https://api.adorable.io/avatars/100/cassio';
   const messagesRef = useRef() as React.MutableRefObject<HTMLDivElement>;
 
   useEffect(() => {
@@ -19,12 +22,22 @@ const ChannelData: React.FC = () => {
   return (
     <Container>
       <Messages ref={messagesRef}>
-        {Array.from(Array(15).keys()).map((n) => (
+        {Array.from(Array(5).keys()).map((n) => (
           <ChannelMessage
             key={n}
             author="Guilherme Rodz"
             date="21/06/2020"
             content="Hoje é o meu aniversário!"
+            image={image}
+          />
+        ))}
+        {Array.from(Array(5).keys()).map((n) => (
+          <ChannelMessage
+            key={n}
+            author="Cassio Carvalho"
+            date="31/07/2020"
+            content="Hoje é o meu aniversário!"
+            image={image3}
           />
         ))}
 
@@ -39,6 +52,7 @@ const ChannelData: React.FC = () => {
           }
           hasMention
           isBot
+          image={image2}
         />
       </Messages>
 
