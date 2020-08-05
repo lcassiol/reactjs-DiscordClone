@@ -39,7 +39,7 @@ const userList = {
     },
     {
       nickname: 'Pill Bates',
-      image: 'https://api.adorable.io/avatars/100/bill',
+      image: 'https://api.adorable.io/avatars/100/pill',
     },
     {
       nickname: 'Meff Dezzos',
