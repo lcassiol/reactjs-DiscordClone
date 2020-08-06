@@ -83,6 +83,7 @@ const ChannelData: React.FC = () => {
               <>, tem como me carregar no CSGO aee?</>
             </>
           }
+          hasMention
           isBot
           image="https://api.adorable.io/avatars/100/doieg"
         />
@@ -96,7 +97,6 @@ const ChannelData: React.FC = () => {
               <>, me carrega no LoL e CS de novo por favor?</>
             </>
           }
-          hasMention
           isBot
           image="https://api.adorable.io/avatars/100/diego"
         />
@@ -109,7 +109,6 @@ const ChannelData: React.FC = () => {
               <>, me carrega no LoL e CS de novo por favor?</>
             </>
           }
-          hasMention
           isBot
           image="https://api.adorable.io/avatars/100/diego"
         />
