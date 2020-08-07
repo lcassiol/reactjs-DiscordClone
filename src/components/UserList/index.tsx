@@ -21,7 +21,11 @@ const UserList: React.FC<Props> = ({ users }) => {
     <Container>
       <Role>{`Disponivel - ${users.online.length}`}</Role>
       {users.online.map((user) => (
-        <UserRow nickname={user.nickname} image={user.image} />
+        <UserRow
+          nickname={user.nickname}
+          isBot={user.isBot}
+          image={user.image}
+        />
       ))}
 
       <Role>{`Offline - ${users.offline.length}`}</Role>

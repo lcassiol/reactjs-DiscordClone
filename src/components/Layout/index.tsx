@@ -35,6 +35,7 @@ const userList = {
     },
     {
       nickname: 'Diego Fernandes',
+      isBot: true,
       image: 'https://api.adorable.io/avatars/100/diego',
     },
     {
@@ -49,7 +50,6 @@ const userList = {
   offline: [
     {
       nickname: 'Guilherme Rodz',
-      isBot: true,
       image: 'https://api.adorable.io/avatars/100/guilherme',
     },
     {
